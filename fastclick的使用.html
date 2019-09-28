@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			.click{
+				width: 200px;
+				height: 200px;
+				line-height: 200px;
+				background: pink;
+				position: absolute;
+				text-align: center;
+			}
+			.tap{
+				width: 100px;
+				height: 100px;
+				line-height: 100px;
+				background: #6D84A2;
+				position: absolute;
+				margin: 50px;
+				text-align: center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="click">click</div>
+		<div class="tap">tap</div>
+		<script src="JS/common.js"></script>
+		<script src="JS/zepto.min.js"></script>
+		<!-- 引入fastclick.js文件 -->
+		<script src="JS/fastclick.js"></script>
+		<script type="text/javascript">
+			var click = document.querySelector(".click");
+			var tap = document.querySelector(".tap");
+			//使用自己封装的common.js,两个都会触发
+			// itcast.tap(tap,function(e){
+			// 	tap.style.visibility = "hidden";
+			// })
+			// click.onclick = function(){
+			// 	console.log(123);
+			// }
+			
+			//使用zepto.js,没有完全解决
+			// $(".tap").on("tap",function(){
+			// 	$(this).hide();
+			// })
+			// $(".click").on("click",function(){
+			// 	console.log(111);
+			// })
+			
+			//使用fastclick
+			if ('addEventListener' in document) {
+			    document.addEventListener('DOMContentLoaded', function() {
+			        /*参数可以是任意的dom元素，如果写document.body，说明会将document.body下面的所的元素都绑定fastclick*/
+			        FastClick.attach(document.body);
+			    }, false);
+			}
+			
+			tap.addEventListener("click",function(){
+				tap.style.visibility = "hidden";
+			})
+			click.addEventListener("click",function(){
+				console.log(111);  //不会触发click事件
+			})
+		</script>
+		
+	</body>
+</html>

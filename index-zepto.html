@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!-- 设置移动端视口 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>移动web京东项目</title>
+		<!-- 引入公共样式 -->
+		<link rel="stylesheet" href="CSS/base.css"/>
+		<link rel="stylesheet" href="CSS/index.css"/>
+		<!-- 引入zepto.js文件 -->
+		<!-- <script src="zepto-master/src/zepto.js"></script>
+		<script src="zepto-master/src/selector.js"></script>
+		<script src="zepto-master/src/fx.js"></script>
+		<script src="zepto-master/src/touch.js"></script> -->
+		<!-- 引入定制后的zepto.js -->
+		<script src="JS/zepto.min.js"></script>
+	</head>
+	<body>
+		<div class="jd_layout">
+			<!-- 搜索框 -->
+			<div class="jd_search">
+				<a href="" class="jd_logo"></a>
+				<form class="jd_searchBox">
+					<input type="text"/ placeholder="请输入搜索内容">
+				</form>
+				<a href="" class="jd_login">登录</a>
+			</div>
+			<!-- 轮播图 -->
+			<div class="jd_banner">
+				<!-- 图片 -->
+				<ul class="jd_bannerTmg clearfix">
+					<li>
+						<a href="">
+							<img src="uploads/l1.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l2.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l3.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l4.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l5.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l6.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l7.jpg" >
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<img src="uploads/l8.jpg" >
+						</a>
+					</li>
+				</ul>
+				<!-- 点 -->
+				<ul class="jd_bannerIndicator">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<!-- 导航块 -->
+			<div class="jd_nav clearfix">
+				<ul>
+					<li>
+						<a href=""><img src="uploads/nav0.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav1.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav2.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav3.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav4.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav5.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav6.png" ></a>
+						<p>商品分类</p>
+					</li>
+					<li>
+						<a href=""><img src="uploads/nav7.png" ></a>
+						<p>商品分类</p>
+					</li>
+				</ul>
+			</div>
+			<!-- 产品块 -->
+			<div class="jd_product">
+				<div class="jd_productBox clearfix jd_sk">
+					<div class="jd_pTip">
+						<div class="jd_left f_left">
+							<div class="jd_sk-icon f_left m_left10"></div>
+							<span class="jd_sk-text f_left m_left10">掌上秒杀</span>
+							<div class="jd_sk-time f_left m_left10">
+								<span>0</span>
+								<span>0</span>
+								<span>:</span>
+								<span>0</span>
+								<span>0</span>
+								<span>:</span>
+								<span>0</span>
+								<span>0</span>
+							</div>
+						</div>
+						<div class="jd_right f_right m_right10">
+							更多秒杀...
+						</div>
+					</div>
+					<div class="jd_pContent clearfix">
+						<ul>
+							<li class="b_right">
+								<a href="">
+									<img src="uploads/detail01.jpg" >
+								</a>
+								<p>￥10.00</p>
+								<p>￥20.00</p>
+							</li>
+							<li class="b_right">
+								<a href="">
+									<img src="uploads/detail01.jpg" >
+								</a>
+								<p>￥10.00</p>
+								<p>￥20.00</p>
+							</li>
+							<li>
+								<a href="">
+									<img src="uploads/detail01.jpg" >
+								</a>
+								<p>￥10.00</p>
+								<p>￥20.00</p>
+							</li>
+						</ul>	
+					</div>
+				</div>
+				<div class="jd_productBox">
+					<div class="jd_pTip">
+						<h3 class="b_bottom">京东超市</h3>
+					</div>
+					<div class=" jd_pContent clearfix">
+						<a href="" class="a_50 f_left">
+							<img src="uploads/cp1.jpg" class="f_left">
+						</a>
+						<a href="" class="a_50 f_left b_bottom b_left">
+							<img src="uploads/cp2.jpg" class="f_left">
+						</a>
+						<a href="" class="a_50 f_left b_left">
+							<img src="uploads/cp3.jpg" class="f_left">
+						</a>
+					</div>
+				</div>
+				<div class="jd_productBox">
+					<div class="jd_pTip">
+						<h3 class="b_bottom">京东超市</h3>
+					</div>
+					<div class=" jd_pContent clearfix">
+						<a href="" class="a_50 f_right">
+							<img src="uploads/cp4.jpg" class="f_left">
+						</a>
+						<a href="" class="a_50 f_left b_bottom b_left">
+							<img src="uploads/cp5.jpg" class="f_left">
+						</a>
+						<a href="" class="a_50 f_left b_left">
+							<img src="uploads/cp6.jpg" class="f_left">
+						</a>
+					</div>
+				</div>
+			</div>
+	</body>
+		<script type="text/javascript">
+			$(function(){
+				//使用zepto.js实现轮播效果
+				
+				//1.添加首尾两张图片
+				var banner = $(".jd_banner");
+				var imgBox = banner.find("ul:first-of-type");
+				//console.log(imgBox);
+				var indicator = banner.find("ul:eq(1)").find("li");
+				//console.log(indicator);
+				//获取第一张,最后一张照片
+				var first = imgBox.find("li:first-of-type");
+				var last = imgBox.find("li:last-of-type");
+				//进行添加,clone()复制克隆一份
+				imgBox.append(first.clone());
+				last.clone().insertBefore(first);
+				//2.重新设置盒子的宽度和图片的宽度
+				var lis = imgBox.find("li");
+				var count = lis.length;  //获取图片的个数
+				//设置盒子的宽度
+				var bannerWidth = banner.width(); 
+				imgBox.width(count*bannerWidth);
+				//设置每个图片的宽度
+				lis.each(function(index,value){
+					$(lis[index]).width(bannerWidth);//lis[index]是DOM元素
+				});
+				//设置偏移
+				imgBox.css("left",-bannerWidth);
+				
+				var index = 1;
+				
+				var imgAnimation = function(){
+					imgBox.animate({"left":-index*bannerWidth},200,"ease-in-out",function(){
+							if(index == count-1){
+								index = 1;
+								imgBox.css({"left":-index*bannerWidth});
+							}else if(index == 0){
+								index = count-2;
+								imgBox.css({"left":-index*bannerWidth});
+							}
+							indicator.removeClass("active").eq(index-1).addClass("active");	
+						});
+				};
+		
+				
+				//3.开启定时器，设置轮播效果
+				var timeId = setInterval(function(){
+					index++;
+					imgAnimation();
+				},2000);
+				
+				//左滑动
+				imgBox.on("swipeLeft",function(){
+					clearInterval(timeId);
+					index++;
+					imgAnimation();
+				});
+				//右滑动
+				imgBox.on("swipeRight",function(){
+					clearInterval(timeId);
+					index--;
+					imgAnimation();
+				});
+				
+				
+				
+			});
+				
+			
+		</script>
+</html>

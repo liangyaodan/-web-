@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			.div{
+				width: 200px;
+				height: 200px;
+				background: #6D84A2;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="div"></div>
+		
+		<script type="text/javascript">
+			var startTime,startX,startY;
+			var div = document.querySelector(".div");
+			//为div添加触摸事件
+			div.addEventListener("touchstart",function(e){
+				//判断是否只有一根手指
+				if(e.targetTouches.length > 1){
+					return;
+				}
+				//记录手指触摸的时间
+				startTime = Date.now();
+				//记录当前手指触摸坐标
+				startX = e.targetTouches[0].clientX;
+				startY = e.targetTouches[0].clientY;
+			});
+			//为div添加离开事件,离开后就不在有手指了
+			div.addEventListener("touchend",function(e){
+				//判断是否只有一根手指
+				if(e.targetTouches.length > 1){
+					return;
+				}
+				//判断当前时间和手指触摸的时间差,假设大于150为长按操作
+				if(Date.now() - startTime > 150){
+					return;
+				}
+				//记录当前手指触摸坐标
+				var endX = e.changedTouches[0].clientX;
+				var endY = e.changedTouches[0].clientY;
+				//判断离开和触摸时的距离差
+				if(Math.abs(endX - startX) < 6 && Math.abs(endY - startY)<6){
+					console.log("这是单击操作");
+				}
+			});
+		</script>
+	</body>
+</html>

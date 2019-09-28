@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background-color: #E92322;
+			}
+		</style>
+	</head>
+	<body>
+		<div>111</div>
+		<div>222</div>
+		<script type="text/javascript">
+			var div = document.querySelector("div");
+			var clientX,clientY,moveX,moveY,distanceX,distanceY;
+			document.addEventListener("touchstart",function(e){
+				//console.log(e.changedTouches);
+				//e.targetTouches和e.touches没有区别
+				//console.log(e.touches);
+				//console.log(e.targetTouches);
+				
+ 				/* Touch.screenX
+				触点相对于屏幕左边沿的的X坐标.
+				Touch.screenY
+				触点相对于屏幕上边沿的的Y坐标.
+				Touch.clientX
+				触点相对于可见视区(visual viewport)左边沿的的X坐标. 不包括任何滚动偏移.
+				Touch.clientY
+				触点相对于可见视区(visual viewport)上边沿的的Y坐标. 不包括任何滚动偏移.
+				Touch.pageX
+				触点相对于HTML文档左边沿的的X坐标. 当存在水平滚动的偏移时, 这个值包含了水平滚动的偏移.
+				Touch.pageY
+				触点相对于HTML文档上边沿的的Y坐标. 当存在垂直滚动的偏移时, 这个值包含了垂直滚动的偏移. */
+				// console.log(e.targetTouches[0].clientX +','+ e.targetTouches[0].clientY);
+				
+				//获取当前第一次触摸时的对象
+				console.log(e.target);
+				//最开始的坐标
+				startX = e.targetTouches[0].clientX;
+				startY = e.targetTouches[0].clientY;
+			});
+			document.addEventListener("touchmove",function(e){
+				//移动时的坐标
+				moveX = e.targetTouches[0].clientX;
+				moveY = e.targetTouches[0].clientY;
+				//计算坐标相比于上一次移动的距离
+				distanceX = moveX - startX;
+				distanceY = moveY - startY;
+				e.target.style.transform = "translate("+distanceX+"px,"+distanceY+"px)"
+			});
+			document.addEventListener("touchend",function(e){
+				//结束后的坐标
+			});
+		</script>
+	</body>
+</html>
